@@ -1,0 +1,181 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:air"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:painting",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{paint:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "【重要アイテム】絵画",
+                "color": "light_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "焚火に投げ込むと使用。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "<重要アイテム> 怪物の力を宿っている絵画だ。",
+                  "color": "light_purple",
+                  "italic": false
+                },
+                {
+                  "text": "燃やすと消えそう。",
+                  "color": "light_purple",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:flower_pot",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{wp:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "【花瓶】水入り花瓶",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "インベントリーに入ると使用。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "<花瓶>水が入ってる花瓶だ。",
+                  "color": "aqua",
+                  "italic": false
+                },
+                {
+                  "text": "バラを活けることができる(+1回復)",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{st:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "【重要アイテム】棒",
+                "color": "\"#A15305\"",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "焼却炉に投げると使用。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "<重要アイテム>ただの棒だ。",
+                  "color": "\"#A15305\"",
+                  "italic": false
+                },
+                {
+                  "text": "絵画を燃やす事のに使えそう。",
+                  "color": "\"#A15305\"",
+                  "italic": false
+                },
+                {
+                  "text": "チャッカマンと一緒に使用可能。",
+                  "color": "\"#A15305\"",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:flint_and_steel",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{fs:1,}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "【重要アイテム】チャッカマン",
+                "color": "gray",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "火をついてない焚火に投げると使用。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "<重要アイテム>ただのチャッカマン。",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "絵画を燃やすのに使えそう。",
+                  "color": "gray",
+                  "italic": false
+                },
+                {
+                  "text": "棒と一緒に使用可能。",
+                  "color": "gray",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

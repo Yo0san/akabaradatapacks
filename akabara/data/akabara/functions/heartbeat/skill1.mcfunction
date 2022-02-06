@@ -1,0 +1,1 @@
+execute as @a[distance=..15] at @s run function akabara:heartbeat/skill1_2
