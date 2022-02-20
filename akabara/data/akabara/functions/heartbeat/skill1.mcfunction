@@ -1,1 +1,1 @@
-execute as @a[distance=..15] at @s run function akabara:heartbeat/skill1_2
+execute as @a[distance=..15] at @s run playsound custom.abe_shinzo player @a[team=oni,distance=15]

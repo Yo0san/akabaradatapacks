@@ -9,3 +9,4 @@ tellraw @s {"text":"\u30a6\u30a3\u30f3\u30c9\u30d6\u30ec\u30a4\u30ab\u30fc\u30bf
 playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1
 give @s feather{display:{Name:'{"text":"【スキル】run away!","color":"aqua","italic":false}',Lore:['{"text":"持ちながらSHIFTで使用","color":"white","italic":false}','{"text":"<スキル> 5秒間移動速度が上昇する。","color":"aqua","italic":false}','{"text":"クールタイム30秒","color":"aqua","italic":false}']},nmsk:1} 1
 give @s blaze_rod{display:{Name:'{"text":"【スキル】ランダムtp","color":"aqua","italic":false}',Lore:['{"text":"持ちながらSHIFTで使用","color":"white","italic":false}','{"text":"<スキル>5箇所にランダムでtpする。","color":"aqua","italic":false}','{"text":"クールタイム60秒","color":"aqua","italic":false}']},nmsk:2} 1
+give @s tripwire_hook{display:{Name:'{"text":"チェストの鍵","italic":false,"underlined":false}',Lore:['{"text":"人間側しか開けれないチェストを開けることができる、特殊な鍵","color":"white","italic":false}']}} 1

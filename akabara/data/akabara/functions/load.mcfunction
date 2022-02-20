@@ -1,1 +1,2 @@
 tellraw @a ["",{"text":"\u8d64\u8594\u8587\u30c7\u30fc\u30bf\u30d1\u30c3\u30af","bold":true,"color":"dark_red"},{"text":"\n"},{"text":"made by ","color":"dark_red"},{"text":"\u3088\u30fc","bold":true,"color":"dark_red"}]
+execute unless score #3 yvsk1no matches 3 run function akabara:load_once

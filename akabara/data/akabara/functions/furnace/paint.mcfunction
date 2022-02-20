@@ -2,6 +2,7 @@ setblock 1053 58 -51 air
 playsound minecraft:entity.wither.ambient master @a 1053.5 58.5 -51.5 999 0.0
 scoreboard players remove 残り絵画 painting 1
 scoreboard players set 燃やす処理 furnace 0
+function akabara:lootchest/startlootchest
 kill @e[type=item,nbt={Item:{id:"minecraft:painting",Count:1b,tag:{paint:1}}}]
 #teamhumanの残り絵画の処理
 execute if score 残り絵画 painting matches 10 run tellraw @a {"text":"\u6b8b\u308a\u7d75\u753b10\u500b","bold":true,"color":"dark_gray"}

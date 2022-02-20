@@ -2,7 +2,8 @@
 execute as @a[scores={dropbara=1..}] at @s run function akabara:dropgivebara
 execute as @a[tag=normal,scores={dropnmsk1=1..}] at @s run function akabara:drop/dropnmsk1
 execute as @a[tag=normal,scores={dropnmsk2=1..}] at @s run function akabara:drop/dropnmsk2
-
+scoreboard players reset @a[scores={dropnmsk1=1..}] dropnmsk1
+scoreboard players reset @a[scores={dropnmsk2=1..}] dropnmsk2
 #スキル1 run away!検知
 execute as @a[tag=normal,scores={shift=1..},nbt={SelectedItem:{id:"minecraft:feather",Count:1b,tag:{nmsk:1}}}] at @s run function akabara:normal/skill1 
 execute as @a[tag=normal,scores={shift=1..},nbt={SelectedItem:{id:"minecraft:blaze_rod",Count:1b,tag:{nmsk:2}}}] at @s run function akabara:normal/skill2
@@ -14,7 +15,7 @@ execute as @a[scores={nmsk2cdas2=1}] at @s run scoreboard players add @s nmskcd2
 
 #クールダウン検知
 execute as @a[tag=normal,scores={nmskcd1=600}] at @s run function akabara:normal/nmsk1cdconp
-execute as @a[tag=normal,scores={nmskcd2=1600}] at @s run function akabara:normal/nmsk2cdconp
+execute as @a[tag=normal,scores={nmskcd2=2400}] at @s run function akabara:normal/nmsk2cdconp
 
 #ハートビート
 #スキル判定
@@ -67,7 +68,6 @@ execute as @a[nbt={Inventory:[{id:"minecraft:paper",tag:{hpj:1}}]}] at @s if sco
 execute as @a[nbt={Inventory:[{id:"minecraft:paper",tag:{hpj:1}}]}] at @s unless score ヘルパー監視 hpjmax matches 4.. run function akabara:helper/becamehp
 #ヘルパースキル判定
 execute as @a[tag=Helper,scores={shift=1..},nbt={SelectedItem:{id:"minecraft:potion",Count:1b,tag:{hps:1}}}] at @s run function akabara:helper/hpsk1
-execute as @a[scores={shift=1..},tag=Helper,nbt={SelectedItem:{id:"minecraft:potion",Count:1b,tag:{hps2:1}}}] at @s run function akabara:helper/hpsk2
 #ヘルパースキルクールタイム
 execute as @a[tag=Helper,scores={hpscdsu=1}] at @s run scoreboard players add @s hpscd1 1
 execute as @a[tag=Helper,scores={hpscdsu2=1}] at @s run scoreboard players add @s hpscd2 1
@@ -78,6 +78,40 @@ execute as @a[team=oni,scores={bflimittime=2400}] at @s run function akabara:bfl
 #ヘルパースキルクールダウンコンプ検知
 execute as @a[scores={hpscd1=900}] at @s run function akabara:helper/hpsk1cdcomp
 execute as @a[scores={hpscd2=1200}] at @s run function akabara:helper/hpsk2cdcomp
+#マーダー威圧スキル検知
+execute as @a[tag=murder,scores={shift=1..},nbt={SelectedItem:{id:"minecraft:bone",Count:1b,tag:{mdsk:1}}}] at @s run function akabara:murder/skill1
+#マーダー威圧スキルクールダウン判定
+execute as @a[scores={murskill1st=1..}] at @s run scoreboard players add @s murskillcd1 1
+execute as @a[scores={murskillcd1=900}] at @s run function akabara:murder/skill1cdcomp
+#マーダー遠距離射撃スキル検知
+execute as @a[scores={murskill2st=1..}] at @s run scoreboard players add @s murskillcd2 1
+#遠距離射撃スキルクールダウンコンプ
+execute as @a[scores={murskillcd2=1200..}] at @s run function akabara:murder/skill2
+#マーダー監視。
+execute store result score マーダー監視 murjmax if entity @a[tag=Helper]
+#マーダーになる。
+execute as @a[nbt={Inventory:[{id:"minecraft:iron_sword",tag:{murj:1}}]}] at @s if score マーダー監視 murjmax matches 4.. run function akabara:murder/errorbcmur
+execute as @a[nbt={Inventory:[{id:"minecraft:iron_sword",tag:{murj:1}}]}] at @s unless score マーダー監視 murjmax matches 4.. run function akabara:murder/becamemur
+#怪物側なしになる
+execute as @a[nbt={Inventory:[{id:"minecraft:barrier",tag:{mnonej:1}}]}] at @s run function akabara:none/becamemnone
+execute if score 残り絵画 painting matches 0 run setblock 1028 56 -31 minecraft:air
+execute if score 残り絵画 painting matches 0 run setblock 1040 56 -31 minecraft:air
+execute if score 残り絵画 painting matches 0 run setblock 1028 56 -31 minecraft:water
+execute if score 残り絵画 painting matches 0 run setblock 1040 56 -31 minecraft:water
+#マーダーのスキル1の盲目待機タイム
+execute as @a[scores={mursk1bilnd=1}] at @s run scoreboard players add @s mursk1bilndti 1
+execute as @a[scores={mursk1bilndti=120..}] run function akabara:murder/skill1bl
+#怪物側のなしタイプになる。
+execute as @a[nbt={Inventory:[{id:"minecraft:barrier",tag:{nonej:1}}]}] at @s run function akabara:none/becamenone
+execute as @a[nbt={Inventory:[{id:"minecraft:barrier",tag:{mnonej:1}}]}] at @s run function akabara:none/becamemnone
+#ラティマータイプ監視
+execute store result score ラティマー監視 rtmtypecheak if entity @a[tag=rtm]
+#ラティマータイプになる
+execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s if score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/errorrtxj
+execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s unless score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/rtxbecame
+
+
+
 
 
 

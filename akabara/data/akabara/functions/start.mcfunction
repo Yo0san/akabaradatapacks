@@ -2,7 +2,9 @@ title @a times 20 100 20
 title @a subtitle {"text":"START","bold":true,"color":"dark_gray"}
 title @a title {"text":"\u8d64\u8594\u8587\u306e\u9928","bold":true,"color":"dark_red"}
 playsound entity.ender_dragon.ambient master @a ~ ~ ~ 999
-function akabara:lootchest/chest
+scoreboard players reset @a[team=oni] murskillcd2
+scoreboard players set @a[team=oni] murskill2st 1
+function akabara:lootchest/startlootchest
 scoreboard players add チェスト更新セットアップ chestloottimest 1
 execute in minecraft:overworld run tp @a[team=oni] 992.55 63.00 -82.60 361.30 -4.47
 execute in minecraft:overworld run tp @a[team=human] 992.04 63.00 -23.22 179.57 0.78

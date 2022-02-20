@@ -12,6 +12,8 @@ tag @a remove normal
 tag @a remove Helper
 tag @a remove none
 tag @a remove goal
+tag @a remove murder
+tag @a remove mnone
 scoreboard players reset @a nmskcd1
 scoreboard players reset @a nmskcdas
 scoreboard players reset @a nmskcd2
@@ -25,8 +27,15 @@ scoreboard players reset 燃やす処理 furnace
 scoreboard players reset 残り絵画 painting
 scoreboard players reset チェスト更新セットアップ chestloottimest
 scoreboard players reset チェスト更新タイム loottime
+scoreboard players reset @a[team=oni] murskill2st
+scoreboard players reset @a[team=oni] murskillcd2
+scoreboard players reset @a[team=oni] murskill1st
+scoreboard players reset @a[team=oni] murskillcd1
 setblock 1053 58 -51 air
+setblock 1028 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]
+setblock 1040 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]
 fill 992 61 -22 991 61 -22 minecraft:air
 effect clear @a[team=oni] strength
+fill 997 82 -30 997 78 -30 air
 clear @a
 team leave @a
