@@ -11,7 +11,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2b,Amplifier:5b,Duration:100,ShowParticles:0b},{Id:8b,Amplifier:127b,Duration:5}],CustomPotionColor:0,potion:2}"
+              "tag": "{potion:2,CustomPotionEffects:[{Id:2b,Amplifier:-125b,Duration:100,ShowParticles:1b},{Id:8b,Amplifier:-125b,Duration:100},{Id:15b,Amplifier:1b,Duration:3}],CustomPotionColor:0}"
             },
             {
               "function": "minecraft:set_name",

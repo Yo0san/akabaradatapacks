@@ -109,8 +109,15 @@ execute store result score ラティマー監視 rtmtypecheak if entity @a[tag=r
 #ラティマータイプになる
 execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s if score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/errorrtxj
 execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s unless score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/rtxbecame
-
-
+#ラティマー電力オーバー
+execute as @a[scores={thmcharge=101..}] at @s run function akabara:overvolt
+#ラティマースキル1 
+execute as @a[tag=rtm,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:arrow",Count:1b,tag:{thmsk1:1}}},scores={thmcharge=5..}] at @s run function akabara:rtx/rtmsk1
+#ラティマースキル1
+execute as @a[scores={thmsk1cdst=1..}] at @s run scoreboard players add @a thmsk1cd 1
+#ラティマースキル1クールダウンコンプ
+execute as @a[scores={thmsk1cd=60..}] at @s run function akabara:rtx/rtmsk1cdcomp
+#
 
 
 

@@ -14,6 +14,7 @@ tag @a remove none
 tag @a remove goal
 tag @a remove murder
 tag @a remove mnone
+tag @a remove rtm
 scoreboard players reset @a nmskcd1
 scoreboard players reset @a nmskcdas
 scoreboard players reset @a nmskcd2
@@ -31,6 +32,8 @@ scoreboard players reset @a[team=oni] murskill2st
 scoreboard players reset @a[team=oni] murskillcd2
 scoreboard players reset @a[team=oni] murskill1st
 scoreboard players reset @a[team=oni] murskillcd1
+scoreboard players reset @a thmsk1cdst
+scoreboard players reset @a thmsk1cd
 setblock 1053 58 -51 air
 setblock 1028 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]
 setblock 1040 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]
