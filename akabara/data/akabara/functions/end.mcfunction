@@ -34,6 +34,14 @@ scoreboard players reset @a[team=oni] murskill1st
 scoreboard players reset @a[team=oni] murskillcd1
 scoreboard players reset @a thmsk1cdst
 scoreboard players reset @a thmsk1cd
+scoreboard players reset @a thmsk2cdst
+scoreboard players reset @a thmsk2cd
+scoreboard players reset @a rtmsk2spo1
+scoreboard players reset @a rtmsk2spopy1
+scoreboard players reset @a thmcharge
+xp set @a 0 levels
+scoreboard objectives remove akabara
+scoreboard objectives remove bflimittime
 setblock 1053 58 -51 air
 setblock 1028 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]
 setblock 1040 56 -31 minecraft:iron_bars[east=true,north=true,south=true,waterlogged=false,west=true]

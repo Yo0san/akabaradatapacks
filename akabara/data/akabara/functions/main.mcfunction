@@ -74,7 +74,7 @@ execute as @a[tag=Helper,scores={hpscdsu2=1}] at @s run scoreboard players add @
 #いもり対策。
 execute as @a[team=oni,scores={bftimelimitst1=1}] at @s run scoreboard players add @s bflimittime 1
 execute as @a[team=oni,scores={bftimelimitst1=0}] at @s run scoreboard players remove @s[scores={bflimittime=1..}] bflimittime 1
-execute as @a[team=oni,scores={bflimittime=2400}] at @s run function akabara:bflimitup
+execute as @a[team=oni,scores={bflimittime=3600}] at @s run function akabara:bflimitup
 #ヘルパースキルクールダウンコンプ検知
 execute as @a[scores={hpscd1=900}] at @s run function akabara:helper/hpsk1cdcomp
 execute as @a[scores={hpscd2=1200}] at @s run function akabara:helper/hpsk2cdcomp
@@ -107,21 +107,29 @@ execute as @a[nbt={Inventory:[{id:"minecraft:barrier",tag:{mnonej:1}}]}] at @s r
 #ラティマータイプ監視
 execute store result score ラティマー監視 rtmtypecheak if entity @a[tag=rtm]
 #ラティマータイプになる
-execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s if score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/errorrtxj
-execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s unless score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/rtxbecame
+#execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s if score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/errorrtxj
+#execute as @a[nbt={Inventory:[{id:"minecraft:redstone",Count:1b,tag:{rtmj:1}}]}] at @s unless score ラティマー監視 rtxtypecheak matches 4.. run function akabara:rtx/rtxbecame
+execute as @a[nbt={Inventory:[{id:"minecraft:redstone",tag:{rtmj:1}}]}] at @s run function akabara:rtx/rtxbecame
 #ラティマー電力オーバー
 execute as @a[scores={thmcharge=101..}] at @s run function akabara:overvolt
 #ラティマースキル1 
 execute as @a[tag=rtm,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:arrow",Count:1b,tag:{thmsk1:1}}},scores={thmcharge=5..}] at @s run function akabara:rtx/rtmsk1
 #ラティマースキル1
-execute as @a[scores={thmsk1cdst=1..}] at @s run scoreboard players add @a thmsk1cd 1
+execute as @a[scores={thmsk1cdst=1..}] at @s run scoreboard players add @s thmsk1cd 1
 #ラティマースキル1クールダウンコンプ
 execute as @a[scores={thmsk1cd=60..}] at @s run function akabara:rtx/rtmsk1cdcomp
-#
-
-
-
-
+#ラティマースキル2
+execute as @a[scores={thmcharge=15..},tag=rtm,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:spider_eye",Count:1b,tag:{rtmsk2:1}}}] at @s run function akabara:rtx/rtmsk2
+execute as @a[scores={rtmsk2spo1=1}] at @s run scoreboard players add @s rtmsk2spopy1 1
+execute as @a[scores={rtmsk2spopy1=200..}] at @s run function akabara:rtx/rtnsk2_2
+execute as @a[scores={rtmsk2cdst=1..}] at @s run scoreboard players add @s rtmsk2cd 1
+execute as @a[scores={rtmsk2cd=100..}] at @s run function akabara:rtx/rtmsk2cdcomp
+#怪物側の移動速度上昇
+effect give @a[team=oni] speed 1 0 true
+#炉の状態のボスバー
+execute if score 燃やす処理 furnace matches 1 run bossbar set minecraft:fire value 1
+execute if score 燃やす処理 furnace matches 2 run bossbar set minecraft:fire value 2
+execute if score 燃やす処理 furnace matches 3 run bossbar set minecraft:fire value 0
 
 
 

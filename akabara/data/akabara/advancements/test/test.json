@@ -1,0 +1,17 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "entity": {
+            "type": "#minecraft:skeletons",
+            "nbt": "{Tags:["test"]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "experience": 100
+    }
+  }
+  

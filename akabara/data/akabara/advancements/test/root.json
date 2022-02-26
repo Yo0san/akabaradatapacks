@@ -1,0 +1,14 @@
+{
+    "display": {
+        "title": "",
+        "description": "",
+        "icon": {
+            "item": "air"
+        }
+    },
+    "criteria": {
+        "": {
+            "trigger": "impossible"
+        }
+    }
+}

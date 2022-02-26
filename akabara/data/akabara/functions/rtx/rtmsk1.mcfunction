@@ -2,7 +2,7 @@
 #まずxp処理
 clear @s arrow{thmsk1:1}
 xp add @s -5 levels
-scoreboard players remove @s thmcharge 20
+scoreboard players remove @s thmcharge 5
 scoreboard players set @s thmsk1cdst 1
 #矢の召喚
 execute anchored eyes run summon arrow ^ ^ ^1 {life:1200s,damage:3.0d,Tags:["thmsk1ar","thmsk1op"],CustomPotionEffects:[{Id:2b,Amplifier:5b,Duration:60},{Id:8b,Amplifier:-125b,Duration:60}]}
