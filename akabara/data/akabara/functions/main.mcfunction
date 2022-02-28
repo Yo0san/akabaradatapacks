@@ -121,16 +121,11 @@ execute as @a[scores={thmsk1cd=60..}] at @s run function akabara:rtx/rtmsk1cdcom
 #ラティマースキル2
 execute as @a[scores={thmcharge=15..},tag=rtm,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:spider_eye",Count:1b,tag:{rtmsk2:1}}}] at @s run function akabara:rtx/rtmsk2
 execute as @a[scores={rtmsk2spo1=1}] at @s run scoreboard players add @s rtmsk2spopy1 1
-execute as @a[scores={rtmsk2spopy1=200..}] at @s run function akabara:rtx/rtnsk2_2
+execute as @a[scores={rtmsk2spopy1=100..}] at @s run function akabara:rtx/rtnsk2_2
 execute as @a[scores={rtmsk2cdst=1..}] at @s run scoreboard players add @s rtmsk2cd 1
 execute as @a[scores={rtmsk2cd=100..}] at @s run function akabara:rtx/rtmsk2cdcomp
 #怪物側の移動速度上昇
-effect give @a[team=oni] speed 1 0 true
-#炉の状態のボスバー
-execute if score 燃やす処理 furnace matches 1 run bossbar set minecraft:fire value 1
-execute if score 燃やす処理 furnace matches 2 run bossbar set minecraft:fire value 2
-execute if score 燃やす処理 furnace matches 3 run bossbar set minecraft:fire value 0
-
+execute as @a[team=oni] at @s run attribute @s minecraft:generic.movement_speed base set 0.11
 
 
 

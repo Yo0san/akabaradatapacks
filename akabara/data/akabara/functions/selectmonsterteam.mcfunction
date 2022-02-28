@@ -7,3 +7,5 @@ give @a[team=human] tripwire_hook{display:{Name:'{"text":"チェストの鍵","i
 give @a[team=oni] tripwire_hook{display:{Name:'{"text":"怪物側チェストの鍵","italic":false}',Lore:['{"text":"怪物側しか開けれないチェストを開けれる、特殊な鍵だ。","color":"white","italic":false}']}} 1
 scoreboard objectives add akabara dummy {"text":"\u5473\u65b9\u306e\u30d0\u30e9","bold":true,"color":"dark_red"}
 scoreboard objectives add bflimittime dummy {"text":"\u5730\u4e0b\u6ede\u5728\u6642\u9593(3600tick\u307e\u3067\u6ede\u5728\u53ef\u80fd)","bold":true,"color":"gray"}
+scoreboard objectives setdisplay sidebar.team.white akabara
+scoreboard objectives setdisplay sidebar.team.red bflimittime

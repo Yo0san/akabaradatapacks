@@ -13,3 +13,5 @@ effect give @a[team=oni] slowness 5 255 true
 effect give @a[team=oni] jump_boost 5 150 true
 effect give @a[team=oni] weakness 5 255 true
 effect give @a[team=oni] strength 1000000 255 true
+xp set @a[tag=rtm] 50 levels
+scoreboard players set @a[tag=rtm] thmcharge 50

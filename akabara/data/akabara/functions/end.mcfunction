@@ -15,6 +15,7 @@ tag @a remove goal
 tag @a remove murder
 tag @a remove mnone
 tag @a remove rtm
+execute as @a[team=oni] at @s run attribute @s minecraft:generic.movement_speed base set 0.1
 scoreboard players reset @a nmskcd1
 scoreboard players reset @a nmskcdas
 scoreboard players reset @a nmskcd2
