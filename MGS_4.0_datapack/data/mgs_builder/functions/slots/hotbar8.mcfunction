@@ -1,1 +1,0 @@
-scoreboard players set builderSlot V 9

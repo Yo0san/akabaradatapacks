@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = m1911_switch S

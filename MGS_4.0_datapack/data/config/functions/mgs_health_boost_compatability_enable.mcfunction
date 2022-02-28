@@ -1,1 +1,0 @@
-function mgs:gamerule/health_boost_compatability_enable

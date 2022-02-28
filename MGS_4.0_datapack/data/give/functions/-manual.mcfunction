@@ -1,1 +1,0 @@
-function mgs_catalog:manual

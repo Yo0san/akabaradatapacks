@@ -1,1 +1,0 @@
-function mgs:gamerule/recoil_enable

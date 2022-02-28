@@ -1,1 +1,0 @@
-function mgs:gamerule/switch_cooldown_disable

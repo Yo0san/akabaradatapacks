@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = glock18_switch S

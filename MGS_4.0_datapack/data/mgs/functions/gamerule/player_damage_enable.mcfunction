@@ -1,1 +1,0 @@
-scoreboard players set enablePlayerDam V 1

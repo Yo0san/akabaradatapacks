@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = ppsh41_switch S

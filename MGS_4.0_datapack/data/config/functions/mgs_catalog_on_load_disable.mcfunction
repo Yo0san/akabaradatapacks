@@ -1,1 +1,0 @@
-function mgs_catalog:gamerule/catalog_on_load_disable

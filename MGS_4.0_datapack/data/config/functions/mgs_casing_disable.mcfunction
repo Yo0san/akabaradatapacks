@@ -1,1 +1,0 @@
-function mgs:gamerule/casing_disable

@@ -1,1 +1,0 @@
-scoreboard players set builderAtt V 6
