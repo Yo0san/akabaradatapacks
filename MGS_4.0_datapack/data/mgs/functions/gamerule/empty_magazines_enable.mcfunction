@@ -1,1 +1,0 @@
-scoreboard players set enableEmptyMagazines V 0

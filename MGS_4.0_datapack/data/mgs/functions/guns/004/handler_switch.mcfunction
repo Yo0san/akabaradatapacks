@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = aug_switch S

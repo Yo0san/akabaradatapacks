@@ -1,1 +1,0 @@
-scoreboard players set enableHBComp V 0

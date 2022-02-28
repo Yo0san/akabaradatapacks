@@ -1,1 +1,0 @@
-function mgs:gamerule/ui_disable

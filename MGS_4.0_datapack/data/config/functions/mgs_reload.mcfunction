@@ -1,1 +1,0 @@
-function mgs:core/init/setup

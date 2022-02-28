@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = famas_switch S

@@ -1,1 +1,0 @@
-function mgs:gamerule/magazines_enable

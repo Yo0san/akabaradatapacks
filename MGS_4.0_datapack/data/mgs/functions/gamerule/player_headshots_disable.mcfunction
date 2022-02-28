@@ -1,1 +1,0 @@
-scoreboard players set enablePlayerHS V 0

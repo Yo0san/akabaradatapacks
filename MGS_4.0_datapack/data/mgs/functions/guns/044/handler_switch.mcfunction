@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = m24_switch S

@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = m82_switch S

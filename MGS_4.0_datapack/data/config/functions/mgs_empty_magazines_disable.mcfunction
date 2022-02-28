@@ -1,1 +1,0 @@
-function mgs:gamerule/empty_magazines_disable

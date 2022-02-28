@@ -1,1 +1,0 @@
-scoreboard players set enableCatalogOnLoad V 0

@@ -1,1 +1,0 @@
-scoreboard players operation @s cooldown = g3_switch S
