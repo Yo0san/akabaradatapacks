@@ -41,6 +41,7 @@ scoreboard players reset @a rtmsk2spo1
 scoreboard players reset @a rtmsk2spopy1
 scoreboard players reset @a thmcharge
 xp set @a 0 levels
+bossbar set minecraft:fire value 0
 scoreboard objectives remove akabara
 scoreboard objectives remove bflimittime
 setblock 1053 58 -51 air
