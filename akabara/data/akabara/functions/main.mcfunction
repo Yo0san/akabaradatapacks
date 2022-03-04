@@ -120,8 +120,6 @@ execute as @a[scores={thmsk1cdst=1..}] at @s run scoreboard players add @s thmsk
 execute as @a[scores={thmsk1cd=60..}] at @s run function akabara:rtx/rtmsk1cdcomp
 #ラティマースキル2
 execute as @a[scores={thmcharge=15..},tag=rtm,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:spider_eye",Count:1b,tag:{rtmsk2:1}}}] at @s run function akabara:rtx/rtmsk2
-execute as @a[scores={rtmsk2spo1=1}] at @s run scoreboard players add @s rtmsk2spopy1 1
-execute as @a[scores={rtmsk2spopy1=100..}] at @s run function akabara:rtx/rtnsk2_2
 execute as @a[scores={rtmsk2cdst=1..}] at @s run scoreboard players add @s rtmsk2cd 1
 execute as @a[scores={rtmsk2cd=100..}] at @s run function akabara:rtx/rtmsk2cdcomp
 #怪物側の移動速度上昇
