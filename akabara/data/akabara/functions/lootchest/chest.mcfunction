@@ -18,6 +18,7 @@ loot replace block 1045 57 -71 container.13 loot akabara:ltest
 loot replace block 1022 57 -57 container.13 loot akabara:ltest
 loot replace block 1018 57 -79 container.13 loot akabara:ltest
 loot replace block 991 57 -101 container.13 loot akabara:ltest
+loot replace block 1054 57 -122 container.13 loot akabara:ltest
 #2F
 loot replace block 996 68 -27 container.13 loot akabara:ltest
 loot replace block 977 68 -47 container.13 loot akabara:ltest

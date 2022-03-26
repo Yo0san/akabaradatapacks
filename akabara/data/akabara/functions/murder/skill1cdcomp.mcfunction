@@ -1,5 +1,5 @@
 #マーダースキル：威圧のクールダウンコンプ
-give @s bone{display:{Name:'{"text":"威圧","italic":false}',Lore:['{"text":"持ちながらSHIFTで使用。","color":"white","italic":false}','{"text":"<スキル> 威圧できそうな骨だ。","color":"white","italic":false}','{"text":"20m以内にいて、最も近いプレイヤーに鈍足をつける。","color":"white","italic":false}']},mdsk:1} 1
+give @s warped_fungus_on_a_stick{display:{Name:'{"text":"【スキル】怒","color":"red","italic":false}',Lore:['{"text":"右クリックで使用","color":"white","italic":false}','{"text":"怒りの力で加速するが、加速後スタンする。","color":"red","italic":false}','{"text":"クールタイム:45秒","color":"red"}']},CustomModelData:101,mdsk:1} 1
 playsound minecraft:entity.item.pickup master @s ~ ~ ~ 1 1
 scoreboard players reset @s murskill1st
 scoreboard players reset @s murskillcd1 

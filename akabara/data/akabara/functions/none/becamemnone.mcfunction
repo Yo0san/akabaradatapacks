@@ -1,5 +1,7 @@
 clear @s
 tag @s remove murder
+tag @s remove rtm
+tag @s remove ghost
 tag @s add mnone
 tellraw @s {"text":"\u306a\u3057\u306b\u306a\u308a\u307e\u3057\u305f\uff01","bold":true}
 playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1

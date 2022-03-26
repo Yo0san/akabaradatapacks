@@ -1,9 +1,8 @@
 {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "type": "minecraft:item",
-      "nbt": "{Item:{id:\"minecraft:poppy\",Count:1b,tag:{display:{Name:'{\"text\":\"バラ\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}',Lore:['{\"text\":\"重要アイテム ※落とさないで\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"赤バラだ\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"タグにはそのバラ、？ちる時、あなたも？ち果てる\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"難しくて、読めない字がある\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}']},bara:1}}}]"
-    }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "minecraft:item",
+    "nbt": "{Item:{id:\"minecraft:poppy\",Count:1b,tag:{display:{Name:'{\"text\":\"バラ\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}',Lore:['{\"text\":\"重要アイテム ※落とさないで\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"赤バラだ\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"タグにはそのバラ、？ちる時、あなたも？ち果てる\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}','{\"text\":\"難しくて、読めない字がある\",\"color\":\"dark_red\",\"bold\":true,\"italic\":false}']},bara:1}}}]"
   }
-  
+}

@@ -1,2 +1,2 @@
-give @s[tag=Helper,scores={kill=1..}] splash_potion{display:{Name:'{"text":"復讐のポーション","color":"reset","italic":false}',Lore:['{"text":"投げると使用。","color":"white","italic":false}','{"text":"＜スキル＞復讐心だけで作られたポーション","color":"white","italic":false}','{"text":"当たった相手を8秒間鈍足と盲目を与える","color":"white","italic":false}']},hpts:1,CustomPotionEffects:[{Id:2b,Amplifier:8b,Duration:160},{Id:8b,Amplifier:-125b,Duration:160},{Id:15b,Amplifier:1b,Duration:160}],CustomPotionColor:0} 1
-playsound minecraft:custom.abe_shinzo player @s[tag=Helper,scores={kill=1..}]
+give @s[tag=Helper,scores={kill=1..}] warped_fungus_on_a_stick{display:{Name:'{"text":"【ティックスキル】復習のポーション","color":"black","italic":false}',Lore:['{"text":"右クリックで投げる","color":"white","italic":false}','{"text":"復讐心でできたポーションだ","color":"dark_gray","italic":false}','{"text":"周囲に足止めするポーション+を与える","color":"dark_gray","italic":false}']},CustomModelData:4,hps:1} 1
+playsound entity.piglin.angry player @s[tag=Helper,scores={kill=1..}]

@@ -1,5 +1,5 @@
 #ラティマースキル1のクールダウンコンプ
-give @s arrow{display:{Name:'{"text":"【スキル】TM-テーザー銃","color":"red","italic":false}',Lore:['{"text":"持ちながらSHIFTで使用。","color":"white","italic":false}','{"text":"<スキル>スタン制のピストル。当たると移動速度が下がる。","color":"red"}','{"text":"消費電力:5","color":"red","italic":false}']},thmsk1:1} 1
+give @s warped_fungus_on_a_stick{display:{Name:'{"text":"【スキル】TM-テーザー銃","color":"yellow","italic":false}',Lore:['{"text":"右クリックで使用","color":"white","italic":false}','{"text":"ただのテーザー銃だ。","color":"yellow","italic":false}','{"text":"当たったプレイヤーをスタンさせる。","color":"yellow","italic":false}','{"text":"消費電力：10","color":"yellow","italic":false}']},CustomModelData:102,thmsk1:1} 1
 playsound minecraft:entity.item.pickup master @s ~ ~ ~ 1 1
 scoreboard players reset @s thmsk1cdst
 scoreboard players reset @s thmsk1cd

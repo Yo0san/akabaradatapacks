@@ -1,6 +1,6 @@
 #矢を召喚する made by わんこまたー様
 #まずxp処理
-clear @s arrow{thmsk1:1}
+clear @s warped_fungus_on_a_stick{thmsk1:1}
 xp add @s -10 levels
 scoreboard players remove @s thmcharge 10
 scoreboard players set @s thmsk1cdst 1

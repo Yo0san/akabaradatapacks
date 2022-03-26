@@ -15,6 +15,7 @@ tag @a remove goal
 tag @a remove murder
 tag @a remove mnone
 tag @a remove rtm
+tag @a remove ghost
 execute as @a[team=oni] at @s run attribute @s minecraft:generic.movement_speed base set 0.1
 scoreboard players reset @a nmskcd1
 scoreboard players reset @a nmskcdas
@@ -40,6 +41,11 @@ scoreboard players reset @a thmsk2cd
 scoreboard players reset @a rtmsk2spo1
 scoreboard players reset @a rtmsk2spopy1
 scoreboard players reset @a thmcharge
+execute as @a[tag=ghost] at @s run function akabara:ghost/ytz1
+execute as @a[tag=ghost] at @s run scoreboard players reset @s ghsk2cdst
+execute as @a[tag=ghost] at @s run scoreboard players reset @s ghsk2cd
+scoreboard players set 玄関のドアセットアップ aysentdooropenst 0
+scoreboard players set 玄関ドア aysentdooropen 0
 xp set @a 0 levels
 bossbar set minecraft:fire value 0
 scoreboard objectives remove akabara
