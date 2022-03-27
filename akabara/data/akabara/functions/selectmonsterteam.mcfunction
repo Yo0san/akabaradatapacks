@@ -1,6 +1,7 @@
 execute unless entity @a[tag=moc] run team join oni @r
 team join oni @r[tag=moc]
 team join human @a[team=!oni]
+execute as @a[team=oni] at @s run attribute @s minecraft:generic.movement_speed base set 0.12
 tellraw @a [{"text":"\u4eca\u56de\u306e\u602a\u7269\u306f","bold":true,"color":"red"},{"selector":"@a[team=oni]"},{"text":"\u3067\u3059\uff01","bold":true,"color":"red"}]
 tag @a remove notakabara
 give @a[team=human] tripwire_hook{display:{Name:'{"text":"チェストの鍵","italic":false,"underlined":false}',Lore:['{"text":"人間側しか開けれないチェストを開けることができる、特殊な鍵","color":"white","italic":false}']}} 1

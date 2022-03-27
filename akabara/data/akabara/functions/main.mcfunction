@@ -170,16 +170,17 @@ execute as @a[scores={tpc6cdst=1}] at @s run scoreboard players add @s tpc6cd 1
 execute as @a[scores={tpc6cd=1..599}] at @s run function akabara:ghost/tpc6cdki
 execute as @a[scores={tpc6cd=600}] at @s run function akabara:ghost/tpc6cdcomp
 #呪いの絵画を設置give @p warped_fungus_on_a_stick{display:{Name:'{"text":"【スキル】呪いの絵画","color":"black","italic":false}',Lore:['{"text":"取った人間のバラを一切れちぎる絵画を設置する。","color":"white","italic":false}','{"text":"※ただし、怪物がとってしまうと効果がないので注意。","color":"white","bold":true,"italic":false}','{"text":"クールタイム：1分","color":"white","italic":false}']},ghsk:2} 1
-execute as @a[scores={usedskill=1..},nbt={SelectedItem:[{id:"minecraft:warped_fungus_on_a_stick",tag:{thmsk1:1}}]}] run function akabara:ghost/ghsk2
+execute as @a[nbt={SelectedItem:{tag:{ghsk:2}}},scores={UsedWarpedFungusOnAStick=1..}] at @s run function akabara:ghost/ghsk2
 execute as @a[scores={ghsk2cdst=1}] at @s run scoreboard players add @s ghsk2cd 1
 execute as @a[scores={ghsk2cd=1200}] at @s run function akabara:ghost/ghsk2cdcomp
 #それを手にすると死ぬ
 execute as @a[team=oni,nbt={Inventory:[{id:"minecraft:painting",tag:{gstsk2:1}}]}] at @s run clear @s minecraft:painting{gstsk2:1}
 execute as @a[team=human,nbt={Inventory:[{id:"minecraft:painting",tag:{gstsk2:1}}]}] at @s run function akabara:ghost/ghsk2p
 #ゴーストになる
-execute as @a[nbt={Inventory:[{id:"minecraft:painting",tag:{ghic:1}}]}] at @s run function akabara:ghost/becameghost
+execute as @a[nbt={Inventory:[{id:"minecraft:paper",tag:{ghic:1}}]}] at @s run function akabara:ghost/becameghost
 #玄関のドア開く過程
 execute as @a[x=994,y=63,z=-23,distance=..1,team=human,predicate=akabara:shift] if score 玄関のドアセットアップ aysentdooropenst matches 1 run scoreboard players add 玄関ドア aysentdooropen 1
+execute as @a[x=990,y=63,z=-83,distance=..1,team=human,predicate=akabara:shift] if score 玄関のドアセットアップ aysentdooropenst matches 1 run scoreboard players add 玄関ドア aysentdooropen 1
 execute as @a[x=994,y=63,z=-23,distance=..1,team=human,predicate=akabara:shift] if score 玄関のドアセットアップ aysentdooropenst matches 1 unless score 玄関ドア aysentdooropen matches 1 run playsound minecraft:block.anvil.place master @s ~ ~ ~ 1 2
 #玄関のドア開くやつ
 execute as @a[x=994,y=63,z=-23,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 1..600 run title @s times 0 5 0
@@ -290,3 +291,4 @@ execute as @a[scores={ytgc=99}] at @s run title @s title ["",{"text":"|||||","co
 #execute as @a[scores={shift=1..}] at @s run scoreboard players remove @s shift 1
 #右クリック検知リセット
 scoreboard players remove @a[scores={usedskill=1..}] usedskill 1
+scoreboard players set @a UsedWarpedFungusOnAStick 0

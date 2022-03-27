@@ -5,6 +5,7 @@ clear @s[scores={kill=1}] minecraft:painting{paint:1}
 clear @s[scores={kill=1}] minecraft:flint_and_steel{fs:1}
 clear @s[scores={kill=1}] potion{potion:1}
 clear @s[scores={kill=1}] splash_potion{potion:2}
+clear @s[] acacia_trapdoor 1
 function akabara:helper/hpsk2
 tellraw @a [{"selector":"@s"},{"text":"はバラを一切れちぎられた"}]
 scoreboard players reset @s kill
