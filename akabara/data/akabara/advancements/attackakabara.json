@@ -1,7 +1,7 @@
 {
   "criteria": {
     "attack": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "player": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:player",
-              "team": "oni"
+              "team": "human"
             }
           }
         ],
@@ -19,19 +19,13 @@
             "max": 1
           },
           "type": {
-            "is_projectile": false
-          }
-        },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
+            "is_projectile": false,
+            "source_entity": {
               "type": "minecraft:player",
-              "team": "human"
+              "team": "oni"
             }
           }
-        ]
+        }
       }
     }
   },

@@ -131,11 +131,11 @@ execute as @a[scores={rtmsk2cd=200..}] at @s run function akabara:rtx/rtmsk2cdco
 execute as @a[team=oni] at @s run attribute @s minecraft:generic.movement_speed base set 0.12
 #ゴースト 幽体化と具現化/give @p cocoa_beans{display:{Name:'{"text":"【特殊能力】幽体・具現","color":"gray","italic":false}',Lore:['{"text":"幽体と具現化を切り替える事ができる","color":"gray","italic":false}']},CustomModelData:1,yutb:1} 1
 execute as @a[tag=ghost,predicate=akabara:shift,nbt={SelectedItem:{id:"minecraft:cocoa_beans",Count:1b,tag:{yutb:1}}}] at @s run scoreboard players add @s ytgc 1
-execute if entity @a[scores={ytgc=..100},tag=ghost] at @s run scoreboard players reset @s ytgc
+execute if entity @a[scores={ytgc=..40},tag=ghost] at @s run scoreboard players reset @s ytgc
 execute as @a[tag=ghost,scores={shift=0}] at @s if entity @s[scores={ytgc=..99}] at @s run scoreboard players reset @s ytgc
-execute as @a[tag=ghost,scores={ytgc=100..}] at @s if score @s ytc matches 0 run function akabara:ghost/ytz
-execute as @a[tag=ghost,scores={ytgc=100..}] at @s if score @s ytc matches 1 run scoreboard players set @s ytc 2
-execute as @a[tag=ghost,scores={ytgc=100..}] at @s if score @s ytc matches 2 run function akabara:ghost/ytz1
+execute as @a[tag=ghost,scores={ytgc=40..}] at @s if score @s ytc matches 0 run function akabara:ghost/ytz
+execute as @a[tag=ghost,scores={ytgc=40..}] at @s if score @s ytc matches 1 run scoreboard players set @s ytc 2
+execute as @a[tag=ghost,scores={ytgc=40..}] at @s if score @s ytc matches 2 run function akabara:ghost/ytz1
 execute as @a[tag=ghost,scores={ytgc=1}] at @s run playsound minecraft:block.beacon.activate master @s ~ ~ ~ 1 2
 #スキルこんにちは。起動判定
 #領主部室、2F粛清部室上、2F談話室奥部室、1F噴水広場前部室、BF醸造台、?F、研究室倉庫

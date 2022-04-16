@@ -1,5 +1,5 @@
 effect give @s minecraft:speed 2 2
-effect give @a[team=oni,scores={onidame=1..}] minecraft:weakness 1 2
+effect give @a[team=oni,scores={onidame=1..}] minecraft:weakness 3 255 true
 scoreboard players remove @s akabara 1
 clear @s minecraft:poppy{bara:1} 1
 clear @s stick{st:1}
