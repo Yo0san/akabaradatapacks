@@ -55,9 +55,9 @@ execute if entity @a[limit=1,nbt={Inventory:[{id:"minecraft:flower_pot",tag:{wp:
 #薔薇が0になると死ぬ処理
 execute as @a[scores={akabara=0}] at @s run function akabara:gameover
 #攻撃されたら
-execute as @a[scores={kill=1}] at @s run function akabara:attack
+execute as @a[predicate=akabara:atackakabara] at @s run function akabara:attack
 #残機上限超える検知
-execute as @a[scores={akabara=11..}] at @s run function akabara:overbara
+execute as @a[scores={akabara=7..}] at @s run function akabara:overbara
 #ウィンドブレイカー監視
 execute store result score ウィンドブレイカー監視 wbjmax if entity @a[tag=normal]
 #ウィンドブレイカーになる。
@@ -221,6 +221,41 @@ execute as @a[x=994,y=63,z=-23,distance=..1,team=human,predicate=akabara:shift] 
 execute if score 玄関ドア aysentdooropen matches 600 run function akabara:furnace/dooropen
 #playsound minecraft:block.note_block.bell master @a 994.47 63.00 -22.55 2 1
 #execute align xyz positioned ~0.5 ~0.5 ~0.5 run
+#庭の方
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 1..600 run title @s times 0 5 0
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches ..19 run title @s title ["",{"text":"|||||||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 20..39 run title @s title ["",{"text":"|"},{"text":"|||||||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 40..59 run title @s title ["",{"text":"||"},{"text":"||||||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 60..79 run title @s title ["",{"text":"|||"},{"text":"|||||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 80..99 run title @s title ["",{"text":"||||"},{"text":"||||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 100..119 run title @s title ["",{"text":"|||||"},{"text":"||||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 120..139 run title @s title ["",{"text":"||||||"},{"text":"|||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 140..159 run title @s title ["",{"text":"|||||||"},{"text":"||||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 160..179 run title @s title ["",{"text":"||||||||"},{"text":"|||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 180..199 run title @s title ["",{"text":"|||||||||"},{"text":"||||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 200..219 run title @s title ["",{"text":"||||||||||"},{"text":"|||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 220..239 run title @s title ["",{"text":"|||||||||||"},{"text":"||||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 240..259 run title @s title ["",{"text":"||||||||||||"},{"text":"|||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 260..279 run title @s title ["",{"text":"|||||||||||||"},{"text":"||||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 280..299 run title @s title ["",{"text":"||||||||||||||"},{"text":"|||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 300..319 run title @s title ["",{"text":"|||||||||||||||"},{"text":"||||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 320..339 run title @s title ["",{"text":"||||||||||||||||"},{"text":"|||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 340..359 run title @s title ["",{"text":"|||||||||||||||||"},{"text":"||||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 360..379 run title @s title ["",{"text":"||||||||||||||||||"},{"text":"|||||||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 380..399 run title @s title ["",{"text":"|||||||||||||||||||"},{"text":"||||||||||","color":"gray"}]
+execute if score 玄関ドア aysentdooropen matches 400..419 run playsound minecraft:block.note_block.bell master @a 994.47 63.00 -22.55 2 1
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 400..419 run title @s title ["",{"text":"||||||||||||||||||||"},{"text":"|||||||||","color":"gray"}]
+execute if score 玄関ドア aysentdooropen matches 420..439 run playsound minecraft:block.note_block.bell master @a 994.47 63.00 -22.55 2 1
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 420..439 run title @s title ["",{"text":"|||||||||||||||||||||"},{"text":"||||||||","color":"gray"}]
+execute if score 玄関ドア aysentdooropen matches 440..459 run playsound minecraft:block.note_block.bell master @a 994.47 63.00 -22.55 2 1
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 440..459 run title @s title ["",{"text":"||||||||||||||||||||||"},{"text":"|||||||","color":"gray"}]
+execute if score 玄関ドア aysentdooropen matches 460..479 run playsound minecraft:block.note_block.bell master @a 994.47 63.00 -22.55 2 1
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 480..499 run title @s title ["",{"text":"|||||||||||||||||||||||"},{"text":"||||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 500..519 run title @s title ["",{"text":"||||||||||||||||||||||||"},{"text":"|||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 520..539 run title @s title ["",{"text":"|||||||||||||||||||||||||"},{"text":"||||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 540..559 run title @s title ["",{"text":"||||||||||||||||||||||||||"},{"text":"|||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 560..579 run title @s title ["",{"text":"|||||||||||||||||||||||||||"},{"text":"||","color":"gray"}]
+execute as @a[x=990,y=64,z=-82,distance=..1,team=human,predicate=akabara:shift] at @s if score 玄関ドア aysentdooropen matches 580..598 run title @s title ["",{"text":"||||||||||||||||||||||||||||"},{"text":"|","color":"gray"}]
 
 
 
@@ -235,8 +270,27 @@ execute unless entity @a[x=984.5,y=79.5,z=-28.5,distance=..1,team=human] run fil
 #3FBAR⇒談話室
 execute if entity @a[x=1003.5,y=69.5,z=-45.5,distance=..1,team=human] run fill 1003 69 -46 1003 70 -46 air
 execute unless entity @a[x=1003.5,y=69.5,z=-45.5,distance=..1,team=human] run fill 1003 69 -46 1003 70 -46 minecraft:white_stained_glass_pane[north=true,south=true]
-
-
+#鬼側tp設定
+execute if score 鬼tp設定 otpset matches 1 run function akabara:otp/otptick
+#玄関前tpクールタイム
+execute as @a[scores={otp1cdst=1}] at @s run scoreboard players add @s otp1cd 1
+execute as @a[scores={otp1cd=200..}] at @s run function akabara:otp/otp1cdcomp
+#アイテムキル
+execute as @a[scores={otp1cd=1..199}] at @s run function akabara:otp/otp1cdki
+#4F正面階段
+execute as @a[scores={otp2cdst=1}] at @s run scoreboard players add @s otp2cd 1
+#4F正面階段tpクールダウン
+execute as @a[scores={otp2cd=200..}] at @s run function akabara:otp/otp2cdcomp
+#アイテムキル
+execute as @a[scores={otp2cd=1..199}] at @s run function akabara:otp/otp2cdki
+#地下牢獄tp
+execute as @a[scores={otp3cdst=1}] at @s run scoreboard players add @s otp3cd 1
+#地下牢獄tpクールダウン
+execute as @a[scores={otp3cd=200..}] at @s run function akabara:otp/otp3cdcomp
+#アイテムキル
+execute as @a[scores={otp3cd=1..199}] at @s run function akabara:otp/otp3cdki
+#死んだときに検知
+execute as @a[scores={kill=1..}] at @s run function akabara:attack
 
 
 

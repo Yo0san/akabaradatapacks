@@ -1,13 +1,7 @@
 #終了の動作
-tag @a add notakabara
 execute in minecraft:overworld run tp @a[tag=goal] 975.83 65.00 117.35 900.43 2.40
 execute in minecraft:overworld run tp @a[tag=!goal] 978.68 63.00 108.26 1081.10 -9.26
 gamemode adventure @a
-playsound minecraft:entity.ender_dragon.ambient master @a ~ ~ ~ 999 1
-tellraw @a [{"text":"\u8131\u51fa\u8005\uff1a","bold":true,"color":"gold"},{"selector":"@a[tag=goal]"},{"text":"\uff01","bold":true,"color":"gold"}]
-title @a times 20 100 20
-title @a subtitle {"text":"\u7d42\u4e86","bold":true,"color":"red"}
-title @a title {"text":"\u8d64\u8594\u8587\u306e\u9928","bold":true,"color":"red"}
 tag @a remove normal
 tag @a remove Helper
 tag @a remove none

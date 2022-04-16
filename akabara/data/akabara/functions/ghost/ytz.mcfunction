@@ -1,5 +1,6 @@
 effect give @s invisibility 1000000 0 false
 effect give @s weakness 1000000 255 true
+effect give @s speed 1000000 2 true
 scoreboard players reset @s ytgc
 scoreboard players set @s ytc 1
 item replace entity @s inventory.0 with warped_fungus_on_a_stick{display:{Name:'{"text":"1FVIP客人部室","color":"gray","italic":false}'},CustomModelData:201,tpc:4} 1

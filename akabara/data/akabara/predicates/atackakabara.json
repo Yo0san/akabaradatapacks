@@ -1,0 +1,17 @@
+[
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "kill": 1
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "killer_player",
+    "predicate": {
+      "type": "minecraft:player",
+      "team": "oni"
+    }
+  }
+]

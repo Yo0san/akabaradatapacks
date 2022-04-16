@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "attack": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player",
+              "team": "oni"
+            }
+          }
+        ],
+        "damage": {
+          "dealt": {
+            "min": 0.1,
+            "max": 1
+          },
+          "type": {
+            "is_projectile": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player",
+              "team": "human"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "akabara:attack"
+  }
+}
